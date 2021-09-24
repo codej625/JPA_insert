@@ -22,9 +22,12 @@ public class TestController {
 	@ResponseBody
 	@PostMapping(value = "/write", produces = "application/json")
 	public TestResponseDto writer(@RequestBody TestRequestDto testRequestDto) {
-
-		TestResponseDto testResponseDto = new TestResponseDto(testService.write(testRequestDto));
-
+		String 문자 = "이진우";
+		
+		TestResponseDto testResponseDto = TestResponseDto.builder()
+														 .id(testService.write(testRequestDto))
+														 .writer(문자)
+														 .build();
 		return testResponseDto;
 	}
 }
