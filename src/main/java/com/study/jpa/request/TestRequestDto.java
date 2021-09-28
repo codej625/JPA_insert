@@ -39,12 +39,15 @@ public class TestRequestDto {
 	// Setter대신 사용할 builder패턴
 	@JsonCreator
 	@Builder
-	public TestRequestDto(@JsonProperty("id") Long id, 
+	public TestRequestDto(
+						  @JsonProperty("id") Long id, 
 						  @JsonProperty("title") String title,
 						  @JsonProperty("content") String content,
 						  @JsonProperty("writer") String writer,
 						  @JsonProperty("createdDate") LocalDateTime createdDate, 
-						  @JsonProperty("modifiedDte") LocalDateTime modifiedDte) {
+						  @JsonProperty("modifiedDte") LocalDateTime modifiedDte
+						  ) 
+	{
 		this.id = id;
 		this.writer = writer;
 		this.title = title;

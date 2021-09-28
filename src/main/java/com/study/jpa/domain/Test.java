@@ -39,4 +39,10 @@ public class Test extends TimeEntity {
 		this.content = content;
 		this.writer = writer;
 	}
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
+	}
+
 }

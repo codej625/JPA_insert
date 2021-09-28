@@ -20,7 +20,8 @@ public class TestServiceImpl implements TestService {
 
 	@Transactional
 	@Override
-	public Long write(TestRequestDto testRequestDto) {
-		return testRepository.save(testRequestDto.toEntity()).getId();
+	public String write(TestRequestDto RequestDto) {
+		
+		return testRepository.save(RequestDto.toEntity()).getWriter();
 	}
 }

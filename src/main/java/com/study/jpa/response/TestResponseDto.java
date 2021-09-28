@@ -18,8 +18,15 @@ public class TestResponseDto {
 	private LocalDateTime modifiedDte;
 
 	@Builder
-	public TestResponseDto(Long id, String writer, String title, String content, LocalDateTime createdDate,
-			LocalDateTime modifiedDte) {
+	public TestResponseDto(
+						   Long id, 
+						   String writer, 
+						   String title, 
+						   String content, 
+						   LocalDateTime createdDate,
+						   LocalDateTime modifiedDte
+						   ) 
+	{
 		this.id = id;
 		this.writer = writer;
 		this.title = title;
@@ -29,4 +36,9 @@ public class TestResponseDto {
 
 	}
 
+	@Override
+	public String toString() {
+		return writer + "님 안녕하세요";
+	}
+	
 }
