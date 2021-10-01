@@ -23,8 +23,9 @@ public class TestController {
 	@PostMapping(value = "/write", produces = "application/json")
 	public String writer(@RequestBody TestRequestDto RequestDto) {
 
+		String 문자 = testService.write(RequestDto);
 		TestResponseDto responseDto = TestResponseDto.builder()
-													 .writer(testService.write(RequestDto))
+													 .writer(문자)
 													 .build();
 		return responseDto.toString();
 	}
