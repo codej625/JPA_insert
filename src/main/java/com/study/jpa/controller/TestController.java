@@ -24,6 +24,7 @@ public class TestController {
 	public String writer(@RequestBody TestRequestDto RequestDto) {
 
 		String 문자 = testService.write(RequestDto);
+		
 		TestResponseDto responseDto = TestResponseDto.builder()
 													 .writer(문자)
 													 .build();
